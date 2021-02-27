@@ -1,0 +1,60 @@
+/* navbar */
+
+nav {
+    font-family: 'RocknRoll One', sans-serif;
+    background-color: #6096ba;
+    color: #ffffff;
+}
+
+
+/* cards */
+
+#skills .card,
+#project .card,
+#contact .card {
+    border-radius: 27px;
+    background: #ffffff;
+    box-shadow: -6px 6px 12px #8bafcd, 6px -6px 12px #bbedff;
+}
+
+#education .card {
+    border-radius: 27px;
+    background: #a3cef1;
+    box-shadow: -6px 6px 12px #d9d9d9, 6px -6px 12px #ffffff;
+}
+
+
+/* section */
+
+section {
+    padding-top: 6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+section .section-title {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.jumbotron {
+    padding-top: 6rem;
+    background-color: #a3cef1;
+}
+
+#skills {
+    background-color: #a3cef1;
+}
+
+#project {
+    background-color: #a3cef1;
+}
+
+#contact {
+    background-color: #a3cef1;
+}
+
+footer {
+    font-family: 'RocknRoll One', sans-serif;
+    background-color: #6096ba;
+    color: #ffffff;
+}
