@@ -6,18 +6,22 @@ nav {
     color: #ffffff;
 }
 
+.navbar-collapse .nav-item .nav-link {
+    color: #ffffff;
+}
+
 
 /* cards */
 
 #skills .card,
-#project .card,
-#contact .card {
+#project .card {
     border-radius: 27px;
     background: #ffffff;
     box-shadow: -6px 6px 12px #8bafcd, 6px -6px 12px #bbedff;
 }
 
-#education .card {
+#education .card,
+#contact .card {
     border-radius: 27px;
     background: #a3cef1;
     box-shadow: -6px 6px 12px #d9d9d9, 6px -6px 12px #ffffff;
@@ -46,10 +50,6 @@ section .section-title {
 }
 
 #project {
-    background-color: #a3cef1;
-}
-
-#contact {
     background-color: #a3cef1;
 }
 
