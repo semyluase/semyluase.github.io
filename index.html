@@ -17,6 +17,9 @@
     <!-- font awesome -->
     <link href="assets/css/node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
+    <!-- sweet alert -->
+    <link rel="stylesheet" href="assets/js/node_modules/sweetalert2/dist/sweetalert2.min.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>My CV | Semy Luase</title>
@@ -286,7 +289,7 @@
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="">
+                            <form name="semy-site-contact-form">
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Fullname</label>
                                     <input type="text" class="form-control" id="fullname" name="fullname">
@@ -301,11 +304,16 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                    <textarea class="form-control" id="message" rows="3" name="message"></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <button type="submit" class="btn btn-primary d-grid gap-2 d-md-flex justify-content-end">Send
+                                    <button type="submit" class="btn btn-primary btn-kirim">Send
                                         Message</button>
+                                    <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status"
+                                            aria-hidden="true"></span>
+                                        Loading...
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -329,9 +337,8 @@
     <!-- typed js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 
-    <!-- progress bar -->
-    <script src="assets/js/node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="assets/js/node_modules/donutty/dist/donutty-jquery.js"></script>
+    <!-- sweet alert -->
+    <script src="assets/js/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 
     <script src="assets/js/myJS.js "></script>
 </body>
