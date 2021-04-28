@@ -1,13 +1,55 @@
+:root {
+    --navBgColor: #5aa9e6;
+    --textnormal: #ffffff;
+    --secEvenBgColor: #ffffff;
+    --secOddBgColor: #a3cef1;
+    --textAll: #333;
+    --textFooter: #fff;
+    --textCard: #333;
+}
+
+html[data-color-mode='dark'] {
+    --navBgColor: rgb(22, 22, 22);
+    --textnormal: #333;
+    --secEvenBgColor: rgb(73, 73, 73);
+    --secOddBgColor: #fff;
+    --textAll: #fff;
+    --textFooter: #fff;
+    --textCard: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--textAll);
+    width: 100vw;
+}
+
+.toggle-darkMode {
+    position: fixed;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: 25px;
+    filter: drop-shadow(3px 0 3px rgba(0, 0, 0, 0.2));
+}
+
+
 /* navbar */
 
 nav {
     font-family: 'RocknRoll One', sans-serif;
-    background-color: #5aa9e6;
-    color: #ffffff;
+    background-color: var(--navBgColor);
+    color: #fff;
 }
 
 .navbar-collapse .nav-item .nav-link {
-    color: #ffffff;
+    color: #fff;
 }
 
 
@@ -16,15 +58,15 @@ nav {
 #skills .card,
 #project .card {
     border-radius: 27px;
-    background: #ffffff;
-    box-shadow: -6px 6px 12px #8bafcd, 6px -6px 12px #bbedff;
+    background: var(--secEvenBgColor);
+    color: var(--textAll);
 }
 
 #education .card,
 #contact .card {
     border-radius: 27px;
-    background: #a3cef1;
-    box-shadow: -6px 6px 12px #d9d9d9, 6px -6px 12px #ffffff;
+    background: var(--secOddBgColor);
+    color: var(--textCard);
 }
 
 
@@ -42,19 +84,52 @@ section .section-title {
 
 .jumbotron {
     padding-top: 6rem;
-    background-color: #a3cef1;
+    background-color: var(--secOddBgColor);
 }
 
-#skills {
-    background-color: #a3cef1;
+.sosmed a i {
+    color: var(--textnormal);
 }
 
-#project {
-    background-color: #a3cef1;
+#skills,
+#project,
+.jumbotron {
+    background-color: var(--secOddBgColor);
+    color: var(--textnormal);
+}
+
+#about,
+#education,
+#contact {
+    background-color: var(--secEvenBgColor);
+    color: var(--textAll);
 }
 
 footer {
     font-family: 'RocknRoll One', sans-serif;
-    background-color: #5aa9e6;
-    color: #ffffff;
+    background-color: var(--navBgColor);
+    color: var(--textFooter);
+    padding: 10px;
+}
+
+footer i {
+    color: var(--textFooter);
+}
+
+footer a {
+    color: var(--textFooter);
+}
+
+
+/* path */
+
+.jumboPath,
+.skillsPath,
+.projectPath {
+    fill: var(--secEvenBgColor);
+}
+
+.aboutPath,
+.eduPath {
+    fill: var(--secOddBgColor);
 }
