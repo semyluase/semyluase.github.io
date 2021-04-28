@@ -12,15 +12,13 @@ let typed2 = new Typed('.works', {
 });
 
 const moonPath =
-    'M32 50C32 77.6142 50.5 100 50.5 100C22.8858 100 0.5 77.6142 0.5 50C0.5 22.3858 22.8858 0 50.5 0C50.5 0 32 22.3858 32 50Z';
+    'M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50Z';
 
 const sunPath =
     'M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50Z';
 
 const darkMode = document.querySelector('#darkMode');
 const html = document.querySelector('html');
-
-console.log(html.dataset.colorMode);
 
 let toggle = false;
 
@@ -38,7 +36,25 @@ darkMode.addEventListener('click', () => {
         })
         .add({
                 targets: darkMode,
-                rotate: 320,
+                translateY: 250,
+            },
+            '-=550',
+        )
+        .add({
+                targets: darkMode,
+                translateY: 0,
+            },
+            '-=550',
+        )
+        .add({
+                targets: '.sunStopFirst',
+                stopColor: toggle ? 'rgb(200,105,43)' : 'rgb(255,255,255)',
+            },
+            '-=750',
+        )
+        .add({
+                targets: '.sunStopSecond',
+                stopColor: toggle ? 'rgb(239,185,67)' : 'rgb(161,161,161)',
             },
             '-=750',
         )
