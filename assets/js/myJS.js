@@ -73,6 +73,8 @@ darkMode.addEventListener('click', () => {
     }
 });
 
+AOS.init();
+
 const scriptURL =
     'https://script.google.com/macros/s/AKfycby17WjamfnRYqxPIqn61cZLif6C1lLKP_yRyMstvYEWY9GERQDrCGUYselaG5AIBeYm/exec';
 const form = document.forms['semy-site-contact-form'];

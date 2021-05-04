@@ -1,21 +1,21 @@
 :root {
-    --navBgColor: #5aa9e6;
-    --textnormal: #ffffff;
-    --secEvenBgColor: #ffffff;
-    --secOddBgColor: #a3cef1;
-    --textAll: #333;
-    --textFooter: #fff;
-    --textCard: #333;
+    --navBgColor: #0061a8;
+    --textnormal: #fdf0e3;
+    --secEvenBgColor: #2978b5;
+    --secOddBgColor: #8ab6d6;
+    --textAll: #fdf0e3;
+    --textFooter: #fdf0e3;
+    --textCard: #fdf0e3;
 }
 
 html[data-color-mode='dark'] {
-    --navBgColor: rgb(22, 22, 22);
-    --textnormal: #333;
-    --secEvenBgColor: rgb(73, 73, 73);
-    --secOddBgColor: #fff;
-    --textAll: #fff;
-    --textFooter: #fff;
-    --textCard: #333;
+    --navBgColor: #1d2d50;
+    --textnormal: #fcdab7;
+    --secEvenBgColor: #133b5c;
+    --secOddBgColor: #1e5f74;
+    --textAll: #fcdab7;
+    --textFooter: #fcdab7;
+    --textCard: #fcdab7;
 }
 
 * {
@@ -27,6 +27,7 @@ html[data-color-mode='dark'] {
 body {
     color: var(--textAll);
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .toggle-darkMode {
@@ -56,17 +57,21 @@ nav {
 /* cards */
 
 #skills .card,
-#project .card {
+#contact .card {
     border-radius: 27px;
-    background: var(--secEvenBgColor);
+    background-color: var(--secEvenBgColor);
     color: var(--textAll);
 }
 
 #education .card,
-#contact .card {
+#project .card {
     border-radius: 27px;
-    background: var(--secOddBgColor);
-    color: var(--textCard);
+    background-color: var(--secOddBgColor);
+    color: var(--textAll);
+}
+
+#skills .card img {
+    filter: drop-shadow(1px 3px 1px rgba(255, 255, 255, 0.5));
 }
 
 
@@ -89,10 +94,22 @@ section .section-title {
 
 .sosmed a i {
     color: var(--textnormal);
+    font-size: 2.8rem;
+}
+
+.sosmed a:hover i {
+    animation: sosmed-bouncing 3s ease-in-out infinite;
+}
+
+#certification img {
+    height: 350px;
+    border-radius: 20px;
+    border: 7px solid var(--textAll);
 }
 
 #skills,
-#project,
+#certification,
+#contact,
 .jumbotron {
     background-color: var(--secOddBgColor);
     color: var(--textnormal);
@@ -100,7 +117,7 @@ section .section-title {
 
 #about,
 #education,
-#contact {
+#project {
     background-color: var(--secEvenBgColor);
     color: var(--textAll);
 }
@@ -125,11 +142,42 @@ footer a {
 
 .jumboPath,
 .skillsPath,
-.projectPath {
+.certificationPath {
     fill: var(--secEvenBgColor);
 }
 
 .aboutPath,
-.eduPath {
+.eduPath,
+.projectPath {
     fill: var(--secOddBgColor);
+}
+
+@keyframes sosmed-bouncing {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+    10% {
+        transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+        transform: scale(0.9, 1.1) translateY(-30px);
+    }
+    50% {
+        transform: scale(1.05, 0.95) translateY(0);
+    }
+    57% {
+        transform: scale(1, 1) translateY(-10px);
+    }
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+@media (max-width: 990px) {
+    #skills img {
+        width: 50%;
+    }
 }
